@@ -1,0 +1,71 @@
+html,
+body {
+    background: transparent;
+    margin: 0;
+}
+
+ui-container {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    margin: 0 5% 0 5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+scroll-area {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+margin-area {
+    position: relative;
+    margin: 12px;
+}
+
+scroll-item {
+    position: relative;
+    width: calc(100% - 2px);
+    height: calc(100px - 2px);
+    background: transparent;
+    border: 1px solid transparent;
+    transform: scale(100%);
+    transition: 0.1s ease-in-out;
+    border-image: var(--normal-border);
+    border-image-slice: 1;
+    margin-bottom: -1px;
+}
+
+item-title,
+item-subtitle {
+    position: absolute;
+    left: 24px;
+    color: var(--text-color);
+}
+
+item-title {
+    top: 24px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+item-subtitle {
+    top: 52px;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+item-value {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 200;
+    opacity: 0.75;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}

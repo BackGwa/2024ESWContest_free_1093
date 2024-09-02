@@ -1,0 +1,59 @@
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    background: #000000;
+    margin: 0;
+    overflow: hidden;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    background: transparent;
+}
+
+init-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 10;
+    opacity: 0.0;
+    pointer-events: none;
+    transition: 0.25s ease-in-out;
+}
+
+.show-load {
+    opacity: 1.0;
+    pointer-events: all;
+}
+
+logo-area {
+    position: absolute;
+    width: 480px;
+    height: 90px;
+    background-image: url(../Share/res/PLAYGROUND.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+}

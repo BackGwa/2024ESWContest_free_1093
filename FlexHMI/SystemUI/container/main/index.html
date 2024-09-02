@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인화면</title>
+
+    <script src="../../../Share/scripts/TimeEngine.js"></script>
+    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="../../styles/root.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="high-contrast">
+    <screen-container>
+        <top-area>
+            <button-area>
+                <label-button class="focus" onclick="tab_switch(1, this)">
+                    <button-text>패널</button-text>
+                </label-button>
+                <label-button onclick="tab_switch(2, this)">
+                    <button-text>설정</button-text>
+                </label-button>
+            </button-area>  
+            <time-label></time-label>
+        </top-area>
+        <content-area class="tab1">
+            <tab-switcher id="tab1">
+                <iframe src="../../../Frontend/index.html"></iframe>
+                <!-- <iframe src="../../../ControlUI/index.html"></iframe> -->
+            </tab-switcher>
+
+            <tab-switcher id="tab2">
+                <iframe src="../setting/index.html"></iframe>
+            </tab-switcher>
+        </content-area>
+    </screen-container>
+
+    <keypad-area>
+        <diglog-area>
+            <dialog-title></dialog-title>
+            <input-text-area class="mode-ip">
+                <placeholder-text-area>
+                    <placeholder-label>IPv4 주소</placeholder-label>
+                </placeholder-text-area>
+                <ip-input>
+                    <input type="text" placeholder="000" id="ipaddr-1" maxlength="3">
+                    <input-split></input-split>
+                    <input type="text" placeholder="000" id="ipaddr-2" maxlength="3">
+                    <input-split></input-split>
+                    <input type="text" placeholder="000" id="ipaddr-3" maxlength="3">
+                    <input-split></input-split>
+                    <input type="text" placeholder="000" id="ipaddr-4" maxlength="3">
+                </ip-input>
+                <port-input>
+                    <input type="text" placeholder="00000" id="port-addr" maxlength="5">
+                </port-input>
+            </input-text-area>
+            <dialog-button-area>
+                <cancel-button>
+                    <button-label>취소하기</button-label>
+                </cancel-button>
+                <confirm-button>
+                    <button-label>설정하기</button-label>
+                </confirm-button>
+            </dialog-button-area>
+        </diglog-area>
+    </keypad-area>
+
+    <user-keypad style="top: 300px; left: 512px;">
+        <top-keypad>
+            <number-key onclick="key_event('1')">
+                <number-label>1</number-label>
+            </number-key>
+            <number-key onclick="key_event('2')">
+                <number-label>2</number-label>
+            </number-key>
+            <number-key onclick="key_event('3')">
+                <number-label>3</number-label>
+            </number-key>
+            <number-key onclick="key_event('4')">
+                <number-label>4</number-label>
+            </number-key>
+            <number-key onclick="key_event('5')">
+                <number-label>5</number-label>
+            </number-key>
+            <number-key onclick="key_event('6')">
+                <number-label>6</number-label>
+            </number-key>
+            <number-key onclick="key_event('7')">
+                <number-label>7</number-label>
+            </number-key>
+            <number-key onclick="key_event('8')">
+                <number-label>8</number-label>
+            </number-key>
+            <number-key onclick="key_event('9')">
+                <number-label>9</number-label>
+            </number-key>
+            <number-key onclick="key_event('0')">
+                <number-label>0</number-label>
+            </number-key>
+        </top-keypad>
+        <bottom-keypad>
+            <function-key onclick="key_event('backspace')">
+                <key-img class="image backspace"></key-img>
+            </function-key>
+            <function-key onclick="key_event('enter')">
+                <key-label>확인</key-label>
+            </function-key>
+        </bottom-keypad>
+    </user-keypad>
+</body>
+
+</html>

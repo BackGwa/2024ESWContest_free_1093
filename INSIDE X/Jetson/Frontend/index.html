@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlUI</title>
+
+    <script src="../Share/scripts/paho_mqtt.js"></script>
+    <script src="../Share/scripts/cookie.js"></script>
+    <script src="./script.js"></script>
+    <script src="../Share/scripts/root.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <layout-spliter>
+        <layout-1>
+            <col-layout>
+                <header-text>TODAY</header-text>
+                <counter-box>
+                    <counter-label>RED</counter-label>
+                    <counter-value id="M1x0">0</counter-value>
+                </counter-box>
+                <counter-box>
+                    <counter-label>GREEN</counter-label>
+                    <counter-value id="M1x1">0</counter-value>
+                </counter-box>
+                <counter-box>
+                    <counter-label>YELLOW</counter-label>
+                    <counter-value id="M1x2">0</counter-value>
+                </counter-box>
+                <counter-box>
+                    <counter-label>WHITE</counter-label>
+                    <counter-value id="M1x3">0</counter-value>
+                </counter-box>
+            </col-layout>
+        </layout-1>
+        <layout-2>
+            <live-image>
+                <img src="./res/OFFLINE.png">
+                <live-label>Live</live-label>
+            </live-image>
+        </layout-2>
+    </layout-spliter>
+</body>
+
+</html>

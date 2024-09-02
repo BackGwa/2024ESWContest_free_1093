@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설정</title>
+
+    <link rel="stylesheet" href="../../styles/root.css">
+    <link rel="stylesheet" href="../../styles/UIKit.css">
+
+    <script src="./script.js"></script>
+    <script src="../../../Share/scripts/cookie.js"></script>
+    <script src="../../../Share/scripts/paho_mqtt.js"></script>
+</head>
+
+<body class="high-contrast">
+    <ui-container>
+        <scroll-area>
+            <margin-area></margin-area>
+
+            <scroll-item onclick="plcIP()" id="plcIP">
+                <item-title>PLC 주소 설정</item-title>
+                <item-subtitle>대상 PLC의 IP 주소를 설정합니다.</item-subtitle>
+                <item-value></item-value>
+            </scroll-item>
+            <scroll-item onclick="serverIP()" id="serverIP">
+                <item-title>MQTT 주소 설정</item-title>
+                <item-subtitle>데이터를 송/수신할 MQTT의 주소를 설정합니다.</item-subtitle>
+                <item-value></item-value>
+            </scroll-item>
+            <scroll-item onclick="websocketPORT()" id="websocketPORT">
+                <item-title>MQTT WebSocket 포트 설정</item-title>
+                <item-subtitle>데이터를 송/수신할 MQTT WebSocket 포트 번호를 설정합니다.</item-subtitle>
+                <item-value></item-value>
+            </scroll-item>
+
+            <margin-area></margin-area>
+
+            <scroll-item onclick="mqttTest(this)">
+                <item-title>통신 테스트</item-title>
+                <item-subtitle>MQTT 서버와 통신을 테스트합니다.</item-subtitle>
+                <item-value>시작하기</item-value>
+            </scroll-item>
+
+            <margin-area></margin-area>
+
+            <scroll-item>
+                <item-title>클라이언트 정보</item-title>
+                <item-subtitle><hardware-info></hardware-info></item-subtitle>
+            </scroll-item>
+
+            <scroll-item>
+                <item-title>소프트웨어 정보</item-title>
+                <item-subtitle class="software-version"></item-subtitle>
+            </scroll-item>
+
+            <margin-area></margin-area>
+
+            <scroll-item onclick="software_reboot()">
+                <item-title>소프트웨어 재시동</item-title>
+                <item-subtitle>연결이 원할하지 않을 경우, FlexUI를 재시동할 수 있습니다.</item-subtitle>
+            </scroll-item>
+
+            <margin-area></margin-area>
+
+        </scroll-area>
+    </ui-container>
+</body>
+
+</html>

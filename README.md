@@ -11,6 +11,7 @@ FlexFlow는 어디에서나, 유연하고 빠르게 작동하며, 누구나 쉽�
 미리 설계 된 하드웨어부터 커스텀 하드웨어 지원까지 진정한 오픈소스 스마트팩토리 구축 플랫폼 입니다.<br>
 
 구축 시 문제가 발생하거나, 질문이 있으시면, <a href="https://github.com/BackGwa/FlexFlow/issues">Issue</a>를 남겨주세요. 최대한 도움을 드리겠습니다!<br>
+시연 영상은 [이 곳](https://youtu.be/waabn6HJMFI)에서 시청하실 수 있습니다!
 
 <br><br>
 
